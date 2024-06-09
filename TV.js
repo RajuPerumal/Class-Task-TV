@@ -12,7 +12,8 @@ async function result(){
         if (res.length > 0) {
             var show = res[0].show;
 
-            document.getElementById("card-img").src = show.image ? show.image.medium : 'https://via.placeholder.com/210x295.png?text=No+Image';
+            // document.getElementById("card-img").src = show.image ? show.image.medium : 'https://via.placeholder.com/210x295.png?text=No+Image';
+            document.getElementById("card-img").src = `${show.image ? show.image.medium : N/A}`;
             document.getElementById("card-title").innerText = show.name;
             // document.getElementById("card-genre").innerHTML = `<b>Genre:</b> ${show.genres.join(', ')}`;
             document.getElementById("card-genre").innerHTML = `<b>Genre:</b> ${show.genres[1]}`;
